@@ -1,25 +1,35 @@
+/* 
+Вот читаю я стили и примерно должен понимать за что отвечает элемент по названию его класса
+класс all, ставит меня в ступор
+
+
+*/
 .all{
     width: 1000px;
     margin: 0 auto;
     padding: 0 20px 0 20px; 
 }
+
 .header {
     border-bottom: 1px #000 solid;
     margin: 0;
 }
+
 .header-shadow {
     box-shadow: 0 10px 10px -10px #8c8b8b inset;
     height: 4px;
     margin: 0;
 }
+
 .header p{
     display: inline-block;
     margin: 0;
 }
+
 .header p:nth-child(1){
     font-weight:bold;
-    
 }
+
 .header p:nth-child(1)::first-letter{
     font-style : italic;
 }
@@ -27,6 +37,7 @@
 .header p:nth-child(3){
     opacity: .3;
 }
+
 .header h1 {
     font-weight:bold;
     text-align: center;
@@ -34,23 +45,47 @@
     width: 100%;
     margin-top: 55px;
 }
+
 .header div{
     display: flex;
     height: 200px;
 }
+
 .header-left-block {
     width: 196px;
     height: 100px;
 }
+/*
+    Вот тут задумка именования оч хорошая, но чтобы не изобретать велосипед 
+    можешь почитать про БЭМ - это методология( ну или другими словами один из стандартов
+    если кратко то БЭМ расшифровывается как БлокЭлементМодификатор
+    Название этого класса по бему выглядело бы как
+    .header__block_right
+    .имя-блока__имя-элемента_тип-модификатора
+    имя-блока - отвечает на вопрос: к какому логическому элементу относится(типа родитель логический) этот класс относится к хедеру
+    поэтому хеддер  будет блоком
+    через __ после блока идет имя самого блока, если бы ты создавал логотип в хедере то это было бы .header__logo
+    и в конце через _ отделяется модификатор, допустим у тебя 5 кнопок в хедере которые отличаются незначительно
+    .header__button_red
+    .header__button_yellow
+    .header__button_blue
+    .header__button - а в этом классе можно задать общие стили которые будут присуще всем кнопкам, а в 3 верхних только уникальные для каждого класса
+    
+    Ну и если ты хочешь дать имя блоку из нескольких слов то для разделителя используй дефис 
+    типа  header__user-form
+            user-form__button_red
+*/
 .header-right-block {
     width: 196px;
 }
+
 .text-header {
     width: 600px;
     height: 100%;
     vertical-align	: middle;
     font-size: 35px;
 }
+
 .header img{
     width: 100%;
     height: 115%;
@@ -58,6 +93,7 @@
     filter: grayscale(100%);
     margin-top: -35px;
 }
+
 .middle{
     height: 200px;
 }
