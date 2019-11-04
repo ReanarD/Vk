@@ -41,6 +41,12 @@
     margin-top: 55px;
 }
 
+.header__middle{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
 .header_header div{
     display: flex;
     height: 200px;
@@ -88,12 +94,13 @@
 
 .column_article {
     display: flex;
+    justify-content: space-between;
 }
 
 .column {
     border-style: solid;
-    margin: 0 2px 0 2px;
-    padding: 0 7px 0 7px;
+    margin: 0 2px;
+    padding: 0 7px;
 }
 
 .nav_border_bottom {
